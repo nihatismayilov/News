@@ -1,0 +1,22 @@
+PODS:
+  - DropDown (2.3.13)
+  - SDWebImage (5.12.3):
+    - SDWebImage/Core (= 5.12.3)
+  - SDWebImage/Core (5.12.3)
+
+DEPENDENCIES:
+  - DropDown
+  - SDWebImage
+
+SPEC REPOS:
+  trunk:
+    - DropDown
+    - SDWebImage
+
+SPEC CHECKSUMS:
+  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
+  SDWebImage: 53179a2dba77246efa8a9b85f5c5b21f8f43e38f
+
+PODFILE CHECKSUM: 6fb4d0198971e262fe61b13bcceda26da6f0a8cc
+
+COCOAPODS: 1.11.2
