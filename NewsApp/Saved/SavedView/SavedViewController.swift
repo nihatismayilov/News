@@ -32,6 +32,8 @@ class SavedViewController: UIViewController {
         Helper.sharedInstance.newsLinkArray = UserDefaults.standard.array(forKey: "linkDefaults") as? [String]
         Helper.sharedInstance.newsDateArray = UserDefaults.standard.array(forKey: "dateDefaults") as? [String]
         
+        print(Helper.sharedInstance.newsTopicArray)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -53,7 +55,7 @@ class SavedViewController: UIViewController {
 
 extension SavedViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Helper.sharedInstance.newsTitleArray?.count ?? 0
+        return Helper.sharedInstance.newsMediaArray?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -61,7 +63,7 @@ extension SavedViewController: UITableViewDelegate, UITableViewDataSource {
         cell.savedImageView.layer.cornerRadius = 18
         cell.savedTopicLabel.layer.cornerRadius = 10
         
-        DispatchQueue.main.async {
+        //DispatchQueue.main.async {
             cell.savedTopicLabel.text = Helper.sharedInstance.newsTopicArray?[indexPath.row]
             cell.savedTitleLabel.text = Helper.sharedInstance.newsTitleArray?[indexPath.row]
             cell.savedAuthorLabel.text = Helper.sharedInstance.newsAuthorArray?[indexPath.row]
@@ -77,7 +79,7 @@ extension SavedViewController: UITableViewDelegate, UITableViewDataSource {
             if let imageUrl = Helper.sharedInstance.newsMediaArray?[indexPath.row] {
                 cell.savedImageView.sd_setImage(with: URL(string: imageUrl))
             }
-        }
+        //}
         return cell
     }
     

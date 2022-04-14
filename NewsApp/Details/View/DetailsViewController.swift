@@ -49,7 +49,9 @@ class DetailsViewController: UIViewController {
     @IBOutlet var moreSaveLabel: UILabel!
     @IBOutlet var moreSaveImage: UIImageView!
     @IBOutlet var moreSaveButton: UIButton! {
-        didSet { moreSaveButton.setTitle("", for: .normal) }
+        didSet {
+            moreSaveButton.setTitle("", for: .normal)
+        }
     }
     @IBOutlet var moreShareButton: UIButton! {
         didSet { moreShareButton.setTitle("", for: .normal) }
@@ -66,7 +68,11 @@ class DetailsViewController: UIViewController {
         containerView.clipsToBounds = true
         containerView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
         
-        // DropDown Settings
+        print(mediaAPI)
+        print(topicAPI)
+        print(titleAPI)
+        print(authorAPI)
+        
         showDetails()
         
         // Gesture recognizers
@@ -155,7 +161,6 @@ class DetailsViewController: UIViewController {
     }
     
     func saveButtonClicked() {
-        
         guard let mediaApi = mediaAPI else { return }
         guard let topicApi = topicAPI else { return }
         guard let titleApi = titleAPI else { return }
@@ -208,7 +213,7 @@ class DetailsViewController: UIViewController {
             UserDefaults.standard.set(Helper.sharedInstance.newsLinkArray, forKey: "linkDefaults")
             UserDefaults.standard.set(Helper.sharedInstance.newsDateArray, forKey: "dateDefaults")
         }else {
-
+            
             Helper.sharedInstance.newsIdArray?.append(titleApi)
             Helper.sharedInstance.newsMediaArray?.append(mediaApi)
             Helper.sharedInstance.newsTopicArray?.append(topicApi)

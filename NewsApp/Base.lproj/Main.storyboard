@@ -276,7 +276,7 @@
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain"/>
                                                                 <connections>
-                                                                    <action selector="moreSaveClicked:" destination="vWg-gG-lyB" eventType="touchUpInside" id="euL-bg-7nV"/>
+                                                                    <action selector="moreSaveClicked:" destination="vWg-gG-lyB" eventType="touchUpInside" id="59D-Y7-scq"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ROT-hP-03E">
@@ -427,7 +427,7 @@
                         <outlet property="detailsImageView" destination="kt2-Pw-Wtp" id="0v1-Xa-iEx"/>
                         <outlet property="dropDownButton" destination="bKx-5n-Owd" id="fYw-lS-B5m"/>
                         <outlet property="dropDownView" destination="LWb-G8-Sig" id="PUf-7S-nqA"/>
-                        <outlet property="moreSaveButton" destination="gEg-FA-r7S" id="Ra2-vM-FXL"/>
+                        <outlet property="moreSaveButton" destination="gEg-FA-r7S" id="pYd-Eb-ssP"/>
                         <outlet property="moreSaveImage" destination="MrB-Wp-vWc" id="vL4-BQ-SXl"/>
                         <outlet property="moreSaveLabel" destination="2FP-ha-Obi" id="aUe-aY-Uud"/>
                         <outlet property="moreShareButton" destination="ROT-hP-03E" id="00Z-SQ-q8u"/>

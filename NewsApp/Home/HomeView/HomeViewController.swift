@@ -61,7 +61,7 @@ class HomeViewController: UIViewController {
             NotificationCenter.default.post(name: NSNotification.Name("languageChanged"), object: nil)
         }
         
-        // Check whether data is saved or not
+        // Check Data
         Helper.sharedInstance.newsTitleArray = UserDefaults.standard.array(forKey: "titleDefaults") as? [String]
         
         // Getting current date
